@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Reduanul Hasan | Civil Engineer & Entrepreneur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --ink:#0f1923;
+  --blue:#1b3f72;
+  --accent:#2255b0;
+  --light-blue:#e8eef8;
+  --gold:#b8882a;
+  --muted:#5a6a7e;
+  --rule:#d1dae8;
+  --bg:#f4f6fb;
+  --white:#ffffff;
+  --green:#1a6b3c;
+  --green-bg:#e6f4ec;
+}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  font-size:13.5px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ======= WRAPPER ======= */
+.cv{
+  max-width:960px;
+  width:100%;
+  margin:32px auto 48px;
+  background:var(--white);
+  border-radius:4px;
+  box-shadow:0 2px 30px rgba(15,25,35,0.12);
+  overflow:hidden;
+}
+
+/* ======= HEADER ======= */
+.cv-header{
+  padding:44px 54px 36px;
+  border-bottom:3px solid var(--blue);
+  position:relative;
+}
+.cv-header::after{
+  content:'';
+  position:absolute;
+  bottom:-3px;left:0;
+  width:120px;height:3px;
+  background:var(--gold);
+}
+
+.name{
+  font-family:'EB Garamond',serif;
+  font-size:42px;
+  font-weight:600;
+  color:var(--ink);
+  letter-spacing:-0.5px;
+  line-height:1.1;
+}
+.name em{
+  color:var(--blue);
+  font-style:normal;
+}
+
+.tagline{
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-top:8px;
+}
+
+.header-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-top:24px;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+/* Contact grid */
+.contacts{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 24px;
+}
+.c-row{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:12px;
+  color:var(--muted);
+  text-decoration:none;
+}
+.c-row:hover{color:var(--accent);}
+.c-row svg{flex-shrink:0;}
+
+/* Status badges */
+.badges{display:flex;flex-wrap:wrap;gap:6px;}
+.badge{
+  font-size:10.5px;font-weight:600;
+  padding:4px 12px;border-radius:2px;
+  letter-spacing:0.4px;
+}
+.badge-blue{background:var(--light-blue);color:var(--blue);border:1px solid #c5d4ea;}
+.badge-green{background:var(--green-bg);color:var(--green);border:1px solid #a8d5bb;}
+.badge-gold{background:#fdf3e0;color:var(--gold);border:1px solid #e8cc88;}
+
+/* ======= BODY ======= */
+.cv-body{
+  display:grid;
+  grid-template-columns:1fr 272px;
+}
+
+/* ======= MAIN ======= */
+.main{
+  padding:36px 44px 40px;
+  border-right:1px solid var(--rule);
+}
+
+/* Section */
+.sec{margin-bottom:32px;}
+.sec:last-child{margin-bottom:0;}
+
+.sec-head{
+  display:flex;
+  align-items:center;
+  gap:0;
+  margin-bottom:16px;
+  padding-bottom:8px;
+  border-bottom:1.5px solid var(--rule);
+  position:relative;
+}
+.sec-head::after{
+  content:'';
+  position:absolute;
+  bottom:-1.5px;left:0;
+  width:40px;height:1.5px;
+  background:var(--blue);
+}
+.sec-title{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--blue);
+}
+
+/* Block entries */
+.entry{
+  margin-bottom:20px;
+  padding-bottom:20px;
+  border-bottom:1px dashed var(--rule);
+}
+.entry:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+
+.entry-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.entry-title{
+  font-size:14px;
+  font-weight:700;
+  color:var(--ink);
+  line-height:1.3;
+}
+.entry-org{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:2px;
+  font-style:italic;
+}
+.entry-date{
+  font-size:11px;
+  font-weight:600;
+  color:var(--white);
+  background:var(--blue);
+  padding:3px 10px;
+  border-radius:2px;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.entry-date.gold{background:var(--gold);}
+
+.status-pill{
+  display:inline-block;
+  font-size:9.5px;font-weight:700;
+  padding:2px 8px;border-radius:10px;
+  margin-left:7px;letter-spacing:0.3px;
+  vertical-align:middle;
+}
+.pill-green{background:var(--green-bg);color:var(--green);}
+.pill-blue{background:var(--light-blue);color:var(--blue);}
+
+.entry-desc{
+  font-size:12.5px;
+  color:#374151;
+  margin-top:8px;
+  line-height:1.7;
+}
+.entry-list{
+  margin-top:8px;
+  padding-left:0;
+  list-style:none;
+}
+.entry-list li{
+  font-size:12.5px;
+  color:#374151;
+  padding-left:14px;
+  position:relative;
+  margin-bottom:4px;
+  line-height:1.65;
+}
+.entry-list li::before{
+  content:'–';
+  position:absolute;left:0;
+  color:var(--gold);font-weight:700;
+}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px;}
+.chip{
+  font-size:10.5px;
+  background:var(--light-blue);
+  color:var(--blue);
+  border:1px solid #c5d4ea;
+  padding:2px 9px;
+  border-radius:2px;
+  font-weight:500;
+}
+
+/* Summary */
+.summary-text{
+  font-family:'EB Garamond',serif;
+  font-size:15px;
+  line-height:1.8;
+  color:#2c3e50;
+  border-left:3px solid var(--blue);
+  padding-left:16px;
+}
+
+/* Projects grid */
+.proj-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.proj-card{
+  border:1px solid var(--rule);
+  border-radius:3px;
+  padding:14px;
+  background:#fafcff;
+  border-top:2px solid var(--blue);
+}
+.proj-card:hover{border-top-color:var(--gold);}
+.proj-title{font-size:12.5px;font-weight:700;color:var(--ink);}
+.proj-desc{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.55;}
+.proj-link{
+  font-size:10.5px;color:var(--accent);
+  margin-top:6px;display:block;
+  word-break:break-all;
+  text-decoration:none;
+}
+.proj-link:hover{text-decoration:underline;}
+
+/* Study abroad */
+.abroad-box{
+  background:linear-gradient(135deg,#f0f4ff,#e8eef8);
+  border:1.5px solid #93c5fd;
+  border-radius:3px;
+  padding:18px;
+}
+.abroad-title{
+  font-size:12.5px;font-weight:700;
+  color:var(--blue);margin-bottom:10px;
+}
+.abroad-box ul{padding-left:0;list-style:none;}
+.abroad-box li{
+  font-size:12px;color:#1e3a5f;
+  margin-bottom:5px;line-height:1.6;
+  padding-left:18px;position:relative;
+}
+.abroad-box li::before{content:'›';position:absolute;left:0;color:var(--blue);font-weight:700;}
+
+/* ======= SIDEBAR ======= */
+.sidebar{
+  padding:36px 26px 40px;
+  background:#f9fafd;
+}
+
+.side-sec{margin-bottom:28px;}
+.side-sec:last-child{margin-bottom:0;}
+
+.side-title{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--blue);
+  border-bottom:1.5px solid var(--rule);
+  padding-bottom:7px;
+  margin-bottom:14px;
+  position:relative;
+}
+.side-title::after{
+  content:'';
+  position:absolute;
+  bottom:-1.5px;left:0;
+  width:28px;height:1.5px;
+  background:var(--gold);
+}
+
+/* Info list */
+.info-list{list-style:none;}
+.info-list li{
+  font-size:12px;color:var(--ink);
+  margin-bottom:9px;
+  display:flex;gap:8px;align-items:flex-start;
+  line-height:1.4;
+}
+.info-list a{color:var(--accent);font-size:11.5px;text-decoration:none;}
+.info-list a:hover{text-decoration:underline;}
+
+/* Link cards — prominent social/portfolio */
+.link-cards{display:flex;flex-direction:column;gap:7px;}
+.link-card{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 11px;
+  border:1px solid var(--rule);
+  border-radius:3px;
+  background:var(--white);
+  text-decoration:none;
+  transition:border-color .15s,background .15s;
+  border-left:3px solid var(--blue);
+}
+.link-card:hover{border-color:var(--gold);background:#fdf8ee;}
+.link-card-icon{font-size:15px;flex-shrink:0;}
+.link-card-info{min-width:0;}
+.link-card-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
+.link-card-url{font-size:11px;color:var(--accent);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:170px;}
+
+/* Skill bars */
+.sk-item{margin-bottom:10px;}
+.sk-label{display:flex;justify-content:space-between;font-size:11px;color:var(--ink);margin-bottom:4px;font-weight:500;}
+.sk-bar{height:4px;background:#dde4f0;border-radius:2px;overflow:hidden;}
+.sk-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--blue),#5b8fdb);}
+
+/* Lang */
+.lang-row{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:9px;
+}
+.lang-name{font-size:12px;font-weight:600;color:var(--ink);}
+.lang-level{font-size:10.5px;color:var(--muted);}
+.lang-dots{display:flex;gap:3px;}
+.ldot{width:8px;height:8px;border-radius:50%;background:#dde4f0;}
+.ldot.on{background:var(--blue);}
+
+/* Tools */
+.tool-chips{display:flex;flex-wrap:wrap;gap:5px;}
+.tool-chip{
+  font-size:10.5px;
+  background:var(--white);
+  color:var(--blue);
+  border:1px solid #c5d4ea;
+  padding:3px 8px;
+  border-radius:2px;
+  font-weight:500;
+}
+
+/* Ref */
+.ref-item{
+  border-left:2px solid var(--gold);
+  padding:8px 12px;
+  margin-bottom:10px;
+  background:var(--white);
+  border-radius:0 3px 3px 0;
+}
+.ref-name{font-size:12px;font-weight:700;color:var(--ink);}
+.ref-role{font-size:10.5px;color:var(--muted);margin-top:2px;line-height:1.4;}
+.ref-note{font-size:10px;color:#94a3b8;margin-top:3px;}
+
+/* ======= PRINT BAR ======= */
+.print-bar{
+  padding:18px 32px;
+  text-align:center;
+  background:#f4f6fb;
+  border-top:1px solid var(--rule);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.print-btn{
+  padding:10px 32px;
+  background:var(--blue);
+  color:#fff;
+  border:none;
+  border-radius:3px;
+  font-size:12.5px;
+  font-weight:600;
+  cursor:pointer;
+  letter-spacing:0.5px;
+  font-family:'DM Sans',sans-serif;
+}
+.print-btn:hover{background:var(--accent);}
+.print-note{font-size:11px;color:var(--muted);}
+
+/* ======= PRINT ======= */
+@media print{
+  body{background:#fff;font-size:11px;}
+  .cv{box-shadow:none;margin:0;border-radius:0;max-width:100%;}
+  .print-bar{display:none;}
+  .cv-header{padding:24px 32px 20px;}
+  .name{font-size:32px;}
+  .main{padding:22px 28px 24px;}
+  .sidebar{padding:22px 18px 24px;}
+  .proj-grid{grid-template-columns:1fr 1fr;}
+  .entry{margin-bottom:14px;padding-bottom:14px;}
+  .sec{margin-bottom:20px;}
+  .abroad-box{page-break-inside:avoid;}
+  .proj-grid{page-break-inside:avoid;}
+  .cv-body{grid-template-columns:1fr 240px;}
+}
+
+/* ======= RESPONSIVE: TABLET ======= */
+@media(max-width:800px){
+  .cv{margin:16px 12px 32px;}
+  .cv-header{padding:32px 28px 24px;}
+  .name{font-size:34px;}
+  .cv-body{
+    display:flex;flex-direction:column;
+  }
+  .main{
+    padding:28px 24px;
+    border-right:none;
+    border-bottom:1px solid var(--rule);
+  }
+  .sidebar{padding:28px 24px;}
+  .proj-grid{grid-template-columns:1fr 1fr;}
+  .header-bottom{flex-direction:column;align-items:flex-start;}
+}
+
+/* ======= RESPONSIVE: MOBILE ======= */
+@media(max-width:540px){
+  .cv{margin:8px 6px 24px;}
+  .cv-header{padding:22px 18px 18px;}
+  .name{font-size:28px;}
+  .tagline{font-size:10.5px;letter-spacing:1.5px;}
+  .contacts{gap:6px 16px;}
+  .c-row{font-size:11px;}
+  .main{padding:20px 16px;}
+  .sidebar{padding:20px 16px;}
+  .proj-grid{grid-template-columns:1fr;}
+  .entry-top{flex-direction:column;gap:6px;}
+  .entry-date{align-self:flex-start;}
+  .sec-title{font-size:10px;}
+  .summary-text{font-size:13.5px;}
+  .link-card-url{max-width:140px;}
+  .print-btn{width:100%;padding:11px;}
+}
+</style>
+</head>
+<body>
+<div class="cv">
+
+<!-- ========== HEADER ========== -->
+<div class="cv-header">
+  <div class="name">Reduanul <em>Hasan</em></div>
+  <div class="tagline">Civil Engineer &nbsp;·&nbsp; Entrepreneur &nbsp;·&nbsp; Strategic Investor</div>
+
+  <div class="header-bottom">
+    <div class="contacts">
+      <a class="c-row" href="tel:+8801839272122">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.45-.45a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +880 1839-272122
+      </a>
+      <a class="c-row" href="mailto:rreduanulhasan@gmail.com">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        rreduanulhasan@gmail.com
+      </a>
+      <a class="c-row" href="https://wa.me/8801839272122" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        WhatsApp
+      </a>
+      <span class="c-row">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        GMT +6:00 · Gazipur, Dhaka, Bangladesh
+      </span>
+    </div>
+    <div class="badges">
+      <span class="badge badge-blue">🌍 Open to International</span>
+      <span class="badge badge-green">✓ Available for Projects</span>
+      <span class="badge badge-gold">3+ Years Experience</span>
+    </div>
+  </div>
+</div>
+
+<!-- ========== BODY ========== -->
+<div class="cv-body">
+
+<!-- ===== MAIN ===== -->
+<div class="main">
+
+  <!-- SUMMARY -->
+  <div class="sec">
+    <div class="sec-head"><div class="sec-title">Professional Summary</div></div>
+    <p class="summary-text">
+      Civil Engineering professional and multi-sector entrepreneur from Bangladesh with hands-on expertise in structural design, infrastructure planning, AutoCAD documentation, and international project coordination. Founder &amp; CEO of <strong>THE HUNGRY BEAR</strong> and developer of multiple digital platforms. Committed to engineering solutions and ventures that meet international standards — open to global collaborations, postgraduate studies, and high-impact projects.
+    </p>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="sec">
+    <div class="sec-head"><div class="sec-title">Education</div></div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <div>
+          <div class="entry-title">Diploma in Civil Engineering <span class="status-pill pill-blue">In Progress</span></div>
+          <div class="entry-org">Dhaka Polytechnic Institute (DPI) — Ministry of Education, Bangladesh</div>
+        </div>
+        <div class="entry-date">2022 – 2026</div>
+      </div>
+      <div class="chips">
+        <span class="chip">AutoCAD</span><span class="chip">Structural Mechanics</span><span class="chip">Surveying-I</span>
+        <span class="chip">Hydraulics</span><span class="chip">Physics-II</span><span class="chip">Math-III</span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <div>
+          <div class="entry-title">BSc in Civil Engineering <span class="status-pill pill-blue">Progressing</span></div>
+          <div class="entry-org">DUET (Dhaka University of Engineering &amp; Technology) / AMIE — Bangladesh (IEB Pathway)</div>
+        </div>
+        <div class="entry-date">2024 – Present</div>
+      </div>
+      <div class="chips">
+        <span class="chip">Structural Engineering</span><span class="chip">Fluid Mechanics</span><span class="chip">Advanced Math</span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <div>
+          <div class="entry-title">Higher Secondary Certificate — HSC / Vocational</div>
+          <div class="entry-org">Bangladesh Technical Education Board (BTEB)</div>
+        </div>
+        <div class="entry-date gold">2022</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <div>
+          <div class="entry-title">Secondary School Certificate — SSC</div>
+          <div class="entry-org">Bangladesh Education Board — Gazipur, Dhaka</div>
+        </div>
+        <div class="entry-date gold">~2020</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORK EXPERIENCE -->
+  <div class="sec">
+    <div class="sec-head"><div class="sec-title">Work Experience</div></div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <div>
+          <div class="entry-title">Founder &amp; CEO — THE HUNGRY BEAR <span class="status-pill pill-green">Active</span></div>
+          <div class="entry-org">Digital Food Brand · Gazipur, Dhaka, Bangladesh</div>
+        </div>
+        <div class="entry-date">2023 – Present</div>
+      </div>
+      <ul class="entry-list">
+        <li>Built and scaled a digital-first food brand with zero external funding, driven by a commitment to solving real community needs — Bangladeshi authentic Kacchi and diverse cuisine delivered through a custom online ordering system</li>
+        <li>Developed a customer-facing ordering app and website so people can place orders from home easily, removing traditional barriers to food access</li>
+        <li>Achieved 300%+ organic brand visibility growth in the first year; overseeing brand strategy, digital operations, and customer relations</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Brand Strategy</span><span class="chip">App Development</span><span class="chip">Digital Marketing</span><span class="chip">Operations Management</span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <div>
+          <div class="entry-title">Civil Engineering Consultant <span class="status-pill pill-green">Active</span></div>
+          <div class="entry-org">Freelance / Project-Based · Various Clients &amp; Engineering Firms, Bangladesh</div>
+        </div>
+        <div class="entry-date">2023 – Present</div>
+      </div>
+      <ul class="entry-list">
+        <li>Structural design &amp; AutoCAD documentation for residential and commercial construction projects</li>
+        <li>Full technical design study — Elevated Service Reservoir (2.5M litre capacity): site investigation, zone analysis, mass curve method, 18-slide documented presentation</li>
+        <li>Coordinated international project requirements; produced BOQ, construction plans &amp; technical presentations to international standards</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">AutoCAD</span><span class="chip">Structural Design</span><span class="chip">BOQ</span><span class="chip">International Standards</span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <div>
+          <div class="entry-title">Real Estate &amp; Investment Analyst</div>
+          <div class="entry-org">Independent Investor · Gazipur Corridor, Dhaka</div>
+        </div>
+        <div class="entry-date">2023 – Present</div>
+      </div>
+      <ul class="entry-list">
+        <li>Built a multi-sector investment portfolio spanning civil engineering, food tech, real estate, and digital platforms</li>
+        <li>Conducted land &amp; building assessments along the Gazipur–Dhaka development corridor</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="sec">
+    <div class="sec-head"><div class="sec-title">Notable Projects</div></div>
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <div class="proj-title">🏗 Elevated Service Reservoir</div>
+        <div class="proj-desc">Full civil design — 2.5M litre capacity. Site investigation, hydraulic zone analysis, mass curve method, BOQ &amp; 18-slide technical documentation.</div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-title">🏢 Structural Design Portfolio</div>
+        <div class="proj-desc">Residential &amp; commercial building designs — 2D &amp; 3D structural plans, load calculations, column/beam sizing using STAAD Pro &amp; AutoCAD.</div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-title">🍔 THE HUNGRY BEAR — Ordering App</div>
+        <div class="proj-desc">Community-driven digital restaurant with online ordering system — authentic Bangladeshi Kacchi &amp; cuisine, accessible from home.</div>
+        <a class="proj-link" href="https://gilded-pie-70fff4.netlify.app" target="_blank">gilded-pie-70fff4.netlify.app ↗</a>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-title">🤖 NEXUS AI (v.4)</div>
+        <div class="proj-desc">AI-powered web platform built with Gemini API &amp; Cloudflare Pages — custom AI agent product for productivity and research.</div>
+        <a class="proj-link" href="https://nexus-ai-9wp.pages.dev" target="_blank">nexus-ai-9wp.pages.dev ↗</a>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-title">📰 BREAKDOWN News Channel</div>
+        <div class="proj-desc">Independent digital news &amp; media platform — editorial management, digital publishing, and audience development.</div>
+        <a class="proj-link" href="https://the-breakdowntv.pages.dev" target="_blank">the-breakdowntv.pages.dev ↗</a>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-title">📚 Study Note App</div>
+        <div class="proj-desc">Productivity &amp; note-taking app for engineering students — structured academic workflows and revision tools.</div>
+        <a class="proj-link" href="https://study-note-ap.pages.dev" target="_blank">study-note-ap.pages.dev ↗</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INTERNATIONAL STUDY -->
+  <div class="sec">
+    <div class="sec-head"><div class="sec-title">International Study Aspirations</div></div>
+    <div class="abroad-box">
+      <div class="abroad-title">Open to Postgraduate / Advanced Engineering Programs Internationally</div>
+      <ul>
+        <li><strong>Europe:</strong> Germany (TU Berlin, RWTH Aachen), Finland, Netherlands — tuition-free / low-cost MSc in Civil &amp; Structural Engineering</li>
+        <li><strong>Asia:</strong> Malaysia (UTM, UPM), Japan (MEXT Scholarship), South Korea (GKS Scholarship)</li>
+        <li><strong>Middle East:</strong> UAE (Khalifa University), Qatar (QU) — industry-linked engineering programs</li>
+        <li><strong>Target Enrollment:</strong> 2026 onward (post-Diploma), with BSc continuation via DUET / AMIE in parallel</li>
+        <li><strong>Language:</strong> English (Professional, actively developing) — Bengali (Native)</li>
+        <li>Portfolio, project documentation &amp; academic transcripts available upon request</li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<!-- ===== SIDEBAR ===== -->
+<div class="sidebar">
+
+  <!-- PERSONAL INFO -->
+  <div class="side-sec">
+    <div class="side-title">Personal Info</div>
+    <ul class="info-list">
+      <li><span>📍</span><span>Gazipur, Dhaka, Bangladesh</span></li>
+      <li><span>🕐</span><span>GMT +6:00 — Bangladesh Standard Time</span></li>
+      <li><span>🌍</span><span>Nationality: Bangladeshi</span></li>
+      <li><span>✉️</span><a href="mailto:rreduanulhasan@gmail.com">rreduanulhasan@gmail.com</a></li>
+    </ul>
+  </div>
+
+  <!-- ONLINE PRESENCE — PROMINENT -->
+  <div class="side-sec">
+    <div class="side-title">Online Presence</div>
+    <div class="link-cards">
+
+      <a class="link-card" href="http://reduanul.pages.dev" target="_blank">
+        <span class="link-card-icon">🌐</span>
+        <div class="link-card-info">
+          <div class="link-card-label">Portfolio</div>
+          <div class="link-card-url">reduanul.pages.dev</div>
+        </div>
+      </a>
+
+      <a class="link-card" href="https://www.linkedin.com/in/reduanul-hasan-reduanul-hasan-774b84384" target="_blank">
+        <span class="link-card-icon">💼</span>
+        <div class="link-card-info">
+          <div class="link-card-label">LinkedIn</div>
+          <div class="link-card-url">linkedin.com/in/reduanul-hasan</div>
+        </div>
+      </a>
+
+      <a class="link-card" href="https://github.com/reduanul-hasan" target="_blank">
+        <span class="link-card-icon">💻</span>
+        <div class="link-card-info">
+          <div class="link-card-label">GitHub</div>
+          <div class="link-card-url">github.com/reduanul-hasan</div>
+        </div>
+      </a>
+
+      <a class="link-card" href="https://www.facebook.com/share/18qdFWasN5/" target="_blank">
+        <span class="link-card-icon">📘</span>
+        <div class="link-card-info">
+          <div class="link-card-label">Facebook</div>
+          <div class="link-card-url">facebook.com/reduanulhasan</div>
+        </div>
+      </a>
+
+      <a class="link-card" href="https://www.instagram.com/reduanulhasam" target="_blank">
+        <span class="link-card-icon">📷</span>
+        <div class="link-card-info">
+          <div class="link-card-label">Instagram</div>
+          <div class="link-card-url">@reduanulhasam</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- TECHNICAL SKILLS -->
+  <div class="side-sec">
+    <div class="side-title">Technical Skills — Civil</div>
+    <div class="sk-item"><div class="sk-label"><span>Structural Analysis</span><span>88%</span></div><div class="sk-bar"><div class="sk-fill" style="width:88%"></div></div></div>
+    <div class="sk-item"><div class="sk-label"><span>AutoCAD (2D &amp; 3D Plans)</span><span>90%</span></div><div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div></div>
+    <div class="sk-item"><div class="sk-label"><span>Project Planning &amp; BOQ</span><span>85%</span></div><div class="sk-bar"><div class="sk-fill" style="width:85%"></div></div></div>
+    <div class="sk-item"><div class="sk-label"><span>Hydraulics &amp; Surveying</span><span>80%</span></div><div class="sk-bar"><div class="sk-fill" style="width:80%"></div></div></div>
+    <div class="sk-item"><div class="sk-label"><span>Infrastructure Design</span><span>82%</span></div><div class="sk-bar"><div class="sk-fill" style="width:82%"></div></div></div>
+    <div class="sk-item"><div class="sk-label"><span>Site Investigation</span><span>78%</span></div><div class="sk-bar"><div class="sk-fill" style="width:78%"></div></div></div>
+  </div>
+
+  <!-- BUSINESS / LEADERSHIP SKILLS -->
+  <div class="side-sec">
+    <div class="side-title">Business &amp; Leadership</div>
+    <div class="sk-item"><div class="sk-label"><span>Leadership &amp; Strategy</span><span>92%</span></div><div class="sk-bar"><div class="sk-fill" style="width:92%"></div></div></div>
+    <div class="sk-item"><div class="sk-label"><span>Business Management</span><span>88%</span></div><div class="sk-bar"><div class="sk-fill" style="width:88%"></div></div></div>
+    <div class="sk-item"><div class="sk-label"><span>Brand &amp; Digital Marketing</span><span>85%</span></div><div class="sk-bar"><div class="sk-fill" style="width:85%"></div></div></div>
+    <div class="sk-item"><div class="sk-label"><span>Web &amp; App Development</span><span>75%</span></div><div class="sk-bar"><div class="sk-fill" style="width:75%"></div></div></div>
+  </div>
+
+  <!-- TOOLS -->
+  <div class="side-sec">
+    <div class="side-title">Tools &amp; Platforms</div>
+    <div class="tool-chips">
+      <span class="tool-chip">AutoCAD</span>
+      <span class="tool-chip">STAAD Pro</span>
+      <span class="tool-chip">ETABS</span>
+      <span class="tool-chip">MS Project</span>
+      <span class="tool-chip">MS Office</span>
+      <span class="tool-chip">Firebase</span>
+      <span class="tool-chip">Cloudflare</span>
+      <span class="tool-chip">Gemini API</span>
+      <span class="tool-chip">Netlify</span>
+      <span class="tool-chip">GitHub</span>
+    </div>
+  </div>
+
+  <!-- LANGUAGES -->
+  <div class="side-sec">
+    <div class="side-title">Languages</div>
+    <div class="lang-row">
+      <div>
+        <div class="lang-name">Bengali</div>
+        <div class="lang-level">Native</div>
+      </div>
+      <div class="lang-dots">
+        <div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div>
+      </div>
+    </div>
+    <div class="lang-row">
+      <div>
+        <div class="lang-name">English</div>
+        <div class="lang-level">Professional</div>
+      </div>
+      <div class="lang-dots">
+        <div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="side-sec">
+    <div class="side-title">References</div>
+
+    <div class="ref-item">
+      <div class="ref-name">Md. Arif Rahman</div>
+      <div class="ref-role">Senior Civil Engineer &amp; Technical Advisor<br>Civil Engineering Sector — Dhaka, BD</div>
+      <div class="ref-note">Available upon request</div>
+    </div>
+
+    <div class="ref-item">
+      <div class="ref-name">Civil Engineering Dept.</div>
+      <div class="ref-role">Academic Reference<br>Dhaka Polytechnic Institute (DPI), Tejgaon</div>
+      <div class="ref-note">Available upon request</div>
+    </div>
+
+    <div class="ref-item">
+      <div class="ref-name">Mohammed Hassan</div>
+      <div class="ref-role">Business Investor &amp; Strategic Advisor<br>UAE &amp; Bangladesh — Multi-Sector</div>
+      <div class="ref-note">Available upon request</div>
+    </div>
+
+  </div>
+
+</div><!-- /sidebar -->
+</div><!-- /cv-body -->
+
+<!-- PRINT BAR -->
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">🖨 &nbsp;Print / Save as PDF</button>
+  <span class="print-note">Recommended: A4 paper · Portrait · Color</span>
+</div>
+
+</div><!-- /cv -->
+</body>
+</html>
